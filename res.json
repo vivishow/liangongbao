@@ -1,0 +1,48 @@
+[
+    {
+        "result": {
+            "msg": "成功"
+        },
+        "data": {
+            "isRight": true,
+            "ques": {
+                "quesNo": 2,
+                "options": [
+                    "一万元以上三万元以下",
+                    "二万元以上五 万元以下",
+                    "五万元以上十万元以下"
+                ],
+                "quesTypeStr": "单选题",
+                "quesId": "ovFWoCRHz0eJpAikHKFcnVqpeQniAPcA7AD4APgAgzTLDOQglTk4",
+                "content": "生产经营单位未按照规定对从业人员、被派遣劳动者、实习学生进行安全生产教育和培训，或者未按照规定如实告知有关的安全生产事项的，责令限期改正，逾期未改正的，对其直接负责的主管人员和其他直接责任人员处（  ）的罚款。",
+                "quesType": 1
+            },
+            "rightOptions": [
+                "时间",
+                "地点",
+                "内容",
+                "发现的问题及其处理情况"
+            ]
+        }
+    },
+    {
+        "result": {
+            "msg": "成功"
+        },
+        "data": {
+            "ques": {
+                "quesNo": 1,
+                "options": [
+                    "时间",
+                    "地点",
+                    "内容",
+                    "发现的问题及其处理情况"
+                ],
+                "quesTypeStr": "多选题",
+                "quesId": "kvNhpHKEBFvHZ4mkHKAcnVipeqXlAOMA9ADsAPgAuwDDEMQgsRCfATg",
+                "content": "安全生产监督检查人员应当将检查的（  ），作出书面记录，并由检查人员和被检查单位的负责人签字。",
+                "quesType": 2
+            }
+        }
+    }
+]
