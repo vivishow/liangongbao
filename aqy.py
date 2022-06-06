@@ -22,7 +22,7 @@ def response(flow: http.HTTPFlow) -> None:
             if answer:
                 print('answer:', answer)
                 content['data']['ques']['content'] = question['ques']['content'] + \
-                    '\n答案:'+'\n'.join(answer)
+                    '\n提示:'+'\n'.join(answer)
             else:
                 print('no answer')
             if ('rightOptions' in question and not 'isRight' in question) or not 'ques' in question:
