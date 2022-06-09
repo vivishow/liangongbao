@@ -9,7 +9,8 @@ class QuestionsBank:
         self.answers = self.initAnswers()
 
     def writeAnswers(self):
-        self.nQues.pop()
+        if self.nQues:
+            self.nQues.pop()
         for i in self.nQues:
             del i['quesNo']
             del i['quesId']
@@ -29,9 +30,9 @@ class QuestionsBank:
 
     def handleNQues(self, question):
         if 'rightOptions' in question:
-            print('不是第一题')
+            # print('不是第一题')
             if self.nQues:
-                print('有上一题')
+                # print('有上一题')
                 self.nQues[-1]['rightOptions'] = question['rightOptions']
             # self.nQues.append(question['ques'])
         else:
