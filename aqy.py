@@ -6,7 +6,7 @@ from QuestionsBank import QuestionsBank
 # 启动记录答案
 # mitmdump -s test.py -w record/6-4-01 -p 8888 "~d h5we.lgb360.com"
 
-qb = QuestionsBank()
+qb = QuestionsBank('answer/answer.json')
 
 def response(flow: http.HTTPFlow) -> None:
     if "lgb360.com/aqy/ques/" in flow.request.pretty_url:
