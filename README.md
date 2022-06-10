@@ -12,7 +12,7 @@
 
 新手直接下载这个和代码文件
 
-​	或者直接在mitmproxy官网 https://mitmproxy.org/ 下载安装程序安装.
+​	mitmproxy官网 https://mitmproxy.org/ 下载安装程序安装.
 
 这里要感谢[@8188](https://github.com/8188)同学的提醒
 
@@ -26,10 +26,30 @@
 
 3. 浏览器打开 <mitm.it> 下载证书安装.
 
+
+
+## 视频教程
+
+视频教程已出, B站[点我](https://www.bilibili.com/video/BV1rY411K7VH?share_source=copy_web). 
+
+欢迎进群讨论qq群:217335772
+
+
+
 ## 说明
 
-仅供练功房使用
+配合最新题库更佳!
+
+仅供练功房使用.
+
+
 
 ## TODO
 
 新增一个导出和导入题库的功能
+
+
+
+## 赞赏
+
+觉得不错的话,请我喝杯咖啡吧.![DONATE](./donate.jpg)
