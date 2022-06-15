@@ -1,8 +1,10 @@
 import json
+import socket
 
 class QuestionsBank:
 
     def __init__(self, filename='answer.json') -> None:
+        print('本机IP地址是:',socket.gethostbyname(socket.gethostname()))
         self.filename = filename
         self.nQues = []
         self.answersDict = {}
@@ -30,9 +32,9 @@ class QuestionsBank:
 
     def handleNQues(self, question):
         if 'rightOptions' in question:
-            # print('不是第一题')
+            print('不是第一题')
             if self.nQues:
-                # print('有上一题')
+                print('有上一题')
                 self.nQues[-1]['rightOptions'] = question['rightOptions']
             # self.nQues.append(question['ques'])
         else:
@@ -44,6 +46,10 @@ class QuestionsBank:
 
     def getAnswer(self, question):
         answer = None
-        if question['ques']['content'] in self.answersDict:
-            answer = self.answersDict[question['ques']['content']]
+        if question in self.answersDict:
+            answer = self.answersDict[question]
         return answer
+
+if __name__ == '__main__':
+    qb = QuestionsBank('answer/answer.json')
+    print(qb.getAnswer('根据《安全生产法》的规定，关于安全生产条件的说法，正确的是（  ）。'))
