@@ -164,7 +164,6 @@ include/
 pyvenv.cfg
 test.*
 record/
-answer/
 # General
 .DS_Store
 .AppleDouble
