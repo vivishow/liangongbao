@@ -4,9 +4,9 @@ from mitmproxy import http
 from QuestionsBank import QuestionsBank
 
 # 启动记录答案
-# mitmdump -s test.py -w record/6-4-01 -p 8888 "~d h5we.lgb360.com"
+# mitmdump -s test.py -w record/6-4-01 -p 8888 
 
-qb = QuestionsBank('answer/answer.json')
+qb = QuestionsBank('answer/answerdict.json')
 
 
 def request(flow: http.HTTPFlow) -> None:
@@ -14,7 +14,8 @@ def request(flow: http.HTTPFlow) -> None:
         req_content = json.loads(flow.request.content.decode(
             'UTF-8')) if flow.request.content else {}
         if 'quesId' in req_content:
-            print('reqc',req_content)
+            # print('reqc',req_content)
+            print('nques',qb.nQues[-1])
             answer = qb.getAnswer(qb.nQues[-1]['content'])
             if answer and answer[0] in qb.nQues[-1]['options']:
                 req_content['answerOptions'] = answer
@@ -36,8 +37,12 @@ def response(flow: http.HTTPFlow) -> None:
                 answer = None
             if answer :
                 print('答案:', answer)
-                content['data']['ques']['content'] = question['ques']['content'] + \
-                    '\n提示:'+'\n'.join(answer)
+                # right_answer = []
+                # for o in content['data']['ques']['options']:
+                #     if o in answer:
+                #         o = o + '(正确)'
+                #     right_answer.append(o)
+                # content['data']['ques']['options'] = right_answer
             else:
                 print('暂时没有答案')
             if ('rightOptions' in question and not 'isRight' in question) or not 'ques' in question:
