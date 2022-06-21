@@ -9,16 +9,11 @@ class QuestionsBank:
         self.nQues = []
         self.answersDict = {}
         self.initAnswers()
-        # self.answers = self.initAnswers()
 
     def writeAnswers(self):
         if self.nQues:
             self.nQues.pop()
         for i in self.nQues:
-            # del i['quesNo']
-            # del i['quesId']
-            # if not i in self.answers:
-            #     self.answers.append(i)
             self.answersDict[i['content']] = i['rightOptions']
         self.answersDict['total_number'] = len(self.answersDict) - 1
         with open(self.filename, mode='w', encoding='utf-8') as f:
@@ -32,20 +27,17 @@ class QuestionsBank:
 
     def handleNQues(self, question):
         if 'rightOptions' in question:
-            print('不是第一题')
+            # print('不是第一题')
             if self.nQues:
-                print('有上一题')
+                # print('有上一题')
                 self.nQues[-1]['rightOptions'] = question['rightOptions']
         else:
             self.nQues = []
-            print('第一题')
+            # print('第一题')
         self.nQues.append(question['ques'])
         return self.nQues
 
     def getAnswer(self, question):
-        # answer = None
-        # if question in self.answersDict:
-        #     answer = self.answersDict[question]
         return self.answersDict.get(question)
 
 if __name__ == '__main__':
