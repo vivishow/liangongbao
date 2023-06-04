@@ -49,5 +49,5 @@ def json_to_csv(jname, cname):
     
 if __name__ == '__main__':
     # anl_to_and('answer/answer', 'answer/answer1') 
-    merge_an('answer/answerdict', 'answer/answer') 
+    # merge_an('answer/answerdict', 'answer/answer') 
     json_to_csv('answer/answerdict', 'answer/answercsv')
