@@ -1,0 +1,12 @@
+[
+    {
+        "username": "1",
+        "token": "token",
+        "memberid": "memberid"
+    },
+    {
+        "username": "2",
+        "token": "token",
+        "memberid": "memberid"
+    }
+]
