@@ -1,5 +1,17 @@
 # liangongbao
 
+## 批量答题抽奖
+
+在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.0.0)
+
+下载 [lgb.rar](https://github.com/vivishow/liangongbao/releases/download/v1.0.0/lgb.rar)
+1. 解压在一个文件夹内。
+2. 运行添加用户，用户名只作为区分用户使用.将所有用户扫码登陆后，会自动生成文件名为 userlist.json 的文件.也可以按照格式新建填入用户信息.
+3. 双击答题程序，根据提示操作.
+
+   需配合最新题库使用
+   ps：试用版将于6-8到期
+
 ## 更新
 
 题目有json和csv供大家自行选择
