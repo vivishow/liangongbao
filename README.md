@@ -2,7 +2,7 @@
 
 ## 批量答题抽奖
 
-独立运行，不需要python
+exe文件直接运行，不需要python环境
 
 在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.0.0)
 
