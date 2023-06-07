@@ -1,7 +1,7 @@
 # 题库更新
 
 题目有json和csv供大家自行选择
-2023-06-07 12:0 更新题库 共214题 
+2023-06-07 12:00 更新题库 共214题 
 感谢群友 @默默无闻 的帮助
 
 # 自动版
@@ -10,16 +10,20 @@
 
 exe文件直接运行，不需要python环境
 
-在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.0.0)
+在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.1.0)
 
-下载 [lgb.rar](https://github.com/vivishow/liangongbao/releases/download/v1.0.0/lgb.rar)
-1. 解压在一个文件夹内。
-2. 运行添加用户，用户名只作为区分用户使用.将所有用户扫码登陆后，会自动生成文件名为 userlist.json 的文件.也可以按照格式新建填入用户信息.
-3. 双击答题程序，根据提示操作.
+下载 [BatchAnswer V1.1.0.rar](https://github.com/vivishow/liangongbao/releases/download/v1.1.0/BatchAnswer.rar)
+- 解压在一个文件夹内。仔细阅读使用教程
+- 需配合最新题库使用
 
-   需配合最新题库使用
-   ps：试用版将于6-8到期
+ps：试用版将于6-8到期
 
+### 更新内容
+- 添加用户信息可追加,不再完全覆盖
+- 日志显示用户编号
+- 答题时增加题目类型显示
+- 修复登陆失败找不到用户编号
+- 修复答错题不能继续
 # 手动防滑版
 ## 安装
 
