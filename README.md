@@ -1,8 +1,7 @@
 # 题库更新
 
-题目有json和csv供大家自行选择
-2023-06-07 12:00 更新题库 共214题 
-感谢群友 @默默无闻 的帮助
+因之前群内出现题库被盗用的情况,现只更新hash版题库,需配合新版本使用.
+更新于 2023-06-10 14:00 共287题
 
 # 自动版
 
@@ -10,13 +9,13 @@
 
 exe文件直接运行，不需要python环境
 
-在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.1.0)
+~~在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v1.1.0)~~
 
-下载 [BatchAnswer V1.1.0.rar](https://github.com/vivishow/liangongbao/releases/download/v1.1.0/BatchAnswer.rar)
+~~下载 [BatchAnswer V1.1.0.rar](https://github.com/vivishow/liangongbao/releases/download/v1.1.0/BatchAnswer.rar)~~
 - 解压在一个文件夹内。仔细阅读使用教程
 - 需配合最新题库使用
 
-ps：试用版将于6-8到期
+~~ps：已过期~~
 
 ### 更新内容
 - 添加用户信息可追加,不再完全覆盖
