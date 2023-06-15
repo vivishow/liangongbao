@@ -46,8 +46,20 @@ def json_to_csv(jname, cname):
             if i == 'total_number':
                 continue
             writer.writerow([i, ques_dict[i]])
+
+def json_to_txt(jname, tname):
+    with open(f'{jname}.json', encoding='utf-8', mode='r') as f:
+        ques_dict = json.load(f)
+    del ques_dict['total_number']
+    ques_list = [[k,json.dumps(v,ensure_ascii=False)] for k,v in ques_dict.items()]
+    ques_list = ["######".join(i) for i in ques_list]
+    ques_list = [i+'\n' for i in ques_list]
+    with open(f"{tname}.txt", 'w', encoding='utf-8') as f:
+        # json.dump(ques_list,f,ensure_ascii=False)
+        f.writelines(ques_list)
     
 if __name__ == '__main__':
     # anl_to_and('answer/answer', 'answer/answer1') 
     # merge_an('answer/answerdict', 'answer/answer') 
-    json_to_csv('answer/answerdict', 'answer/answercsv')
+    json_to_csv('../liangongbao/answer/answerdict', '../liangongbao/answer/answercsv')
+    json_to_txt('../liangongbao/answer/answerdict', '../liangongbao/answer/answer2023')
