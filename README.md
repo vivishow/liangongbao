@@ -1,7 +1,7 @@
 # 题库更新
 
 提供csv、json、txt版 根据需要自行取用
-更新于 2023-06-16 23:40 共398题
+更新于 2023-06-17 01:20 共408题
 
 # 自动版
 
@@ -9,13 +9,13 @@
 
 exe文件直接运行，不需要python环境
 
-在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v2.0.0)
+~~在这里[下载](https://github.com/vivishow/liangongbao/releases/tag/v2.0.0)~~
 
-下载 [BatchAnswer V2.0.0.rar](https://github.com/vivishow/liangongbao/releases/download/v2.0.0/BatchAnswer6-13.rar)
+~~下载 [BatchAnswer V2.0.0.rar](https://github.com/vivishow/liangongbao/releases/download/v2.0.0/BatchAnswer6-13.rar)~~
 - 解压在一个文件夹内。仔细阅读使用教程
 - 需配合最新题库使用
 
-ps：6-13过期
+ps：已过期
 
 ### 更新内容
 - 优化文件目录结构
