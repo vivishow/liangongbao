@@ -1,7 +1,7 @@
 # 题库更新
 
 提供csv、json、txt版 根据需要自行取用
-更新于 2023-06-21 23:30 共514题
+更新于 2023-06-22 13:00 共523题
 
 ### 更新内容
 - 优化文件目录结构
@@ -11,14 +11,14 @@
 # 手动防滑版
 ## 安装
 
-1. 首先需要python3环境,官网下载<https://www.python.org/downloads/>
+1. ~~首先需要python3环境,官网下载<https://www.python.org/downloads/>~~
 
-2. 安装mitmproxy
+2. ~~安装mitmproxy~~
 
    `pip3 install mitmproxy`
 
 ---
-
+## 直接看这里
 新手直接下载这个和代码文件
 
 ​	mitmproxy官网 https://mitmproxy.org/ 下载安装程序安装.
