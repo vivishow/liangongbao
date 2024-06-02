@@ -1,3 +1,6 @@
+# import sys
+# sys.path.append("c:\\users\\cxy03\\miniconda3\\envs\\lgb\\lib\\site-packages")
+# sys.path.append("c:\\users\\cxy03\\miniconda3\\lib\\site-packages")
 import json
 from copy import deepcopy
 from mitmproxy import http
@@ -14,7 +17,7 @@ def request(flow: http.HTTPFlow) -> None:
         req_content = json.loads(flow.request.content.decode(
             'UTF-8')) if flow.request.content else {}
         if 'quesId' in req_content:
-            answer = qb.getAnswer(qb.nQues[-1]['content'])
+            answer = qb.getAnswer(qb.nQues[-1]['content'],qb.nQues[-1]['options'])
             if answer and answer[0] in qb.nQues[-1]['options']:
                 req_content['answerOptions'] = answer
                 flow.request.content = json.dumps(req_content).encode('UTF-8')
@@ -33,12 +36,12 @@ def response(flow: http.HTTPFlow) -> None:
                 # 不是最后一题时，获得答案
                 print(f'第{question["ques"]["quesNo"]}题\n{question["ques"]["content"]}\n{question["ques"]["options"]}')
                 qb.handleNQues(question)
-                answer = qb.getAnswer(question['ques']['content'])
+                answer = qb.getAnswer(question['ques']['content'], question["ques"]["options"])
             else: 
                 qb.writeAnswers()
                 print('答题完成')
             if answer:
-                print(f'答案是: {answer}')
+                print(answer)
 
         # if 'data' in content and not 'count' in content['data']:
         #     question = deepcopy(content['data'])

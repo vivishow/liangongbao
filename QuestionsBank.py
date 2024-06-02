@@ -1,5 +1,6 @@
 import json
 import socket
+from openai import OpenAI
 
 class QuestionsBank:
 
@@ -9,6 +10,33 @@ class QuestionsBank:
         self.nQues = []
         self.answersDict = {}
         self.initAnswers()
+        self.api_key = ""
+        self.ai_model = ''
+        self.ai_url=""
+
+
+    def ai_answer(self, question):
+        client = OpenAI(
+            api_key= self.api_key,
+            base_url=self.ai_url,
+        )
+        completion = client.chat.completions.create(
+            model=self.ai_model,
+            messages=[
+                {
+                    "role": "assistant",
+                    "content": "你是一个安全生产管理方面的专家，会直接告诉别人正确的答案",
+                },
+                {
+                    "role": "user",
+                    "content": f'{question} 答案是',
+                },
+            ],
+            top_p=0.1,
+            temperature=0.1,
+        )
+        content = completion.choices[0].message.content
+        return content
 
     def writeAnswers(self):
         if self.nQues:
@@ -37,8 +65,14 @@ class QuestionsBank:
         self.nQues.append(question['ques'])
         return self.nQues
 
-    def getAnswer(self, question):
-        return self.answersDict.get(question)
+    def getAnswer(self, question, options):
+        answer = self.answersDict.get(question)
+        if not answer:
+            recommend = self.ai_answer(f'{question} 选项：{options}')
+            answer = f'ai推荐{recommend}\n'
+        else:
+            answer = f'答案是: {answer}'
+        return answer
 
 if __name__ == '__main__':
     qb = QuestionsBank('answer/answerdict.json')

@@ -1,24 +1,24 @@
 # 题库更新
 
-提供csv、json、txt版 根据需要自行取用
-更新于 2023-06-30 11:30 共699题
+提供json版 其他请使用工具转换
+更新于 2024-06-03 01:06 共459题
 
 ### 更新内容
-- 优化文件目录结构
-- hash题库题目,优化存储结构
-- 优化抽奖提示
-- 更新时间验证服务器
-# 手动防滑版
+- 添加ai查询未知题目（会阻塞进程导致练功房卡住，不想用的用老版本）
+
+
 ## 安装
 
-1. ~~首先需要python3环境,官网下载<https://www.python.org/downloads/>~~
+1. 首先需要python3环境,官网下载<https://www.python.org/downloads/>
 
-2. ~~安装mitmproxy~~
+2. 安装mitmproxy
 
    `pip3 install mitmproxy`
 
 ---
 ## 直接看这里
+ai版不适用
+
 新手直接下载这个和代码文件
 
 ​	mitmproxy官网 https://mitmproxy.org/ 下载安装程序安装.
@@ -39,13 +39,17 @@
 
 5. 新建文件夹 改名字为 *answer* 把题库文件 *answerdict.json*放到*answer*文件夹下.
 
+6. AI平台 可选 https://open.bigmodel.cn https://platform.moonshot.cn/（支持openai库就可以）
+   获取api之后填入 QuestionBank.py 对应位置。具体参考平台文档和openai文档
+
 
 
 ## 视频教程
 
 视频教程已出, B站[点我](https://www.bilibili.com/video/BV1rY411K7VH?share_source=copy_web). 
+新教程陆续更新 关注查看
 
-欢迎进群讨论qq群:217335772
+欢迎进群讨论qq群:217335772 （体验极速版）
 
 
 ## 说明
