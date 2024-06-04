@@ -1,6 +1,4 @@
-# import sys
-# sys.path.append("c:\\users\\cxy03\\miniconda3\\envs\\lgb\\lib\\site-packages")
-# sys.path.append("c:\\users\\cxy03\\miniconda3\\lib\\site-packages")
+
 import json
 from copy import deepcopy
 from mitmproxy import http
