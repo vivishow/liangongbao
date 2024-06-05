@@ -62,4 +62,4 @@ if __name__ == '__main__':
     # anl_to_and('answer/answer', 'answer/answer1') 
     # merge_an('answer/answerdict', 'answer/answer') 
     json_to_csv('../liangongbao/answer/answerdict', '../liangongbao/answer/answercsv')
-    json_to_txt('../liangongbao/answer/answerdict', '../liangongbao/answer/answer2023')
+    json_to_txt('../liangongbao/answer/answerdict', '../liangongbao/answer/answertxt')
