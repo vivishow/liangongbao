@@ -52,7 +52,7 @@ def json_to_txt(jname, tname):
         ques_dict = json.load(f)
     del ques_dict['total_number']
     ques_list = [[k,json.dumps(v,ensure_ascii=False)] for k,v in ques_dict.items()]
-    ques_list = ["######".join(i) for i in ques_list]
+    ques_list = ["###".join(i) for i in ques_list]
     ques_list = [i+'\n' for i in ques_list]
     with open(f"{tname}.txt", 'w', encoding='utf-8') as f:
         # json.dump(ques_list,f,ensure_ascii=False)
